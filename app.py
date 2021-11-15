@@ -16,30 +16,7 @@ mydb = mysql.connector.connect(
   database="sql11448553"
 )
 mycursor = mydb.cursor(dictionary=True)
-
-#mycursor.execute("SELECT * FROM New_Movies")
-'''
-myresult = mycursor.fetchall()
-print(len(myresult))
-j = []
-for x in myresult:
-    		movie_id = x['id']
-    		poster = x["movie"]
-    		date = x["link"]
-    		
-    		fulldate = datetime.datetime.now()
-    		today = str(fulldate.year)+str(fulldate.month)+str(fulldate.day)
-    		
-    		if date==today:
-    			timestamp="New"
-    		else:
-    			timestamp="Old"
-    			
-    		obj = {"id":movie_id,"poster":poster,"timestamp":"timestamp"}
-    		j.append(obj)
-print(j)
-print(j[0]["poster"])
-'''
+   		
 app = Flask(__name__)
 @app.route('/')
 def main_page():
