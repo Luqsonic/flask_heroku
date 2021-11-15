@@ -126,7 +126,7 @@ def home_fetch(page_number):
     tt_pages = len(chunk)
     tt_results = len(r)
     		
-    result = {"page":page_number,
+    result = {"page":int(page_number),
     		"results":final_res,
     		"total_pages":tt_pages,
     		"total_results":tt_results
