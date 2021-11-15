@@ -172,7 +172,7 @@ def link_fetch(movie):
     			  	
     			  	obj = {"id":movieId,"link_name":link_name,"file_size":file_size,"link_url":link_url,"link_id":link_id}
     			  	found = "negative"
-    			  	finalResult = {"found":found,"result":{obj}}
+    			  	finalResult = {"found":found,"result":[obj]}
     			  
     			  myJSON = jsonify(finalResult)
     			  myJSON.headers["Content-Type"] = "application/json; charset=utf-8"
