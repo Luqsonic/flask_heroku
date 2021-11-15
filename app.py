@@ -145,7 +145,7 @@ def home_fetch(page_number):
 
 @app.route('/fetchlinks/<movie>')
 def link_fetch(movie):
-    			  mycursor.execute("SELECT * FROM `NewLinks` WHERE movieId LIKE '{movie}%'")
+    			  mycursor.execute(f"SELECT * FROM `NewLinks` WHERE movieId LIKE '{movie}%'")
     			  collect_rows = mycursor.fetchall()
     			  c = []
     			  finalResult = []
@@ -187,7 +187,7 @@ def link_fetch(movie):
 
 @app.route('/vlink/<link_id>')
 def vlink(link_id):
-    			  mycursor.execute(f"SELECT * FROM `NewLinks` WHERE link_id='{link_id}")
+    			  mycursor.execute(f"SELECT * FROM `NewLinks` WHERE link_id='{link_id}'")
     			  collect_rows = mycursor.fetchall()
     			  
     			  
