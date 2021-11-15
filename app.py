@@ -145,7 +145,7 @@ def home_fetch(page_number):
 
 @app.route('/fetchlinks/<movie>')
 def link_fetch(movie):
-    			  mycursor.execute("SELECT * FROM `NewLinks` WHERE movieId LIKE '{movie}%'")
+    			  mycursor.execute(f"SELECT * FROM `NewLinks` WHERE movieId LIKE '{movie}%'")
     			  collect_rows = mycursor.fetchall()
     			  c = []
     			  finalResult = []
