@@ -17,3 +17,5 @@ mock
 # ----------------------
 gevent
 gunicorn
+pyrebase
+PyJWT
