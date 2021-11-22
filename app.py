@@ -342,7 +342,7 @@ def getMovieData (movieId):
 	myJSON.headers["Access-Control-Expose-Headers"] = "ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length, Content-Range"
 	return myJSON
 
-				
+
 @app.route('/movie_request/<tmdb_id>')
 def requested(tmdb_id):
     	movie_tmdb_id = tmdb_id
@@ -353,9 +353,9 @@ def requested(tmdb_id):
     	movie_name = movie_data['original_title']
     	
     	res = findAndDownload(movie_name,tmdb_id)
-	return res
-	
-	
+    	
+    	return res
+
 				
 if __name__ == '__main__':
     app.run(debug=True)
