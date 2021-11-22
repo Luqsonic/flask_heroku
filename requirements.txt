@@ -22,3 +22,4 @@ PyJWT
 urllib3
 requests
 bs4
+lxml
