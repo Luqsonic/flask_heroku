@@ -19,3 +19,6 @@ gevent
 gunicorn
 pyrebase
 PyJWT
+urllib
+requests
+bs4
