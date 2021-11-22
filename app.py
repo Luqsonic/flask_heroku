@@ -352,7 +352,8 @@ def requested(tmdb_id):
     	
     	movie_name = movie_data['original_title']
     	
-    	findAndDownload(movie_name,tmdb_id)
+    	res = findAndDownload(movie_name,tmdb_id)
+	return res
 	
 	
 				
